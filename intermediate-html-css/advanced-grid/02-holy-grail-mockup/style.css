@@ -5,6 +5,9 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -17,11 +20,30 @@
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 3;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
+}
+
+.logo {
+  justify-self: start;
+  align-self: center;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.menu {
+  justify-self: start;
+  align-self: center;
 }
 
 .sidebar {
@@ -83,6 +105,7 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 3;
 }
 
 .footer p {
